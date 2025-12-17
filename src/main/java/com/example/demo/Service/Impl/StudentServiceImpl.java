@@ -4,28 +4,28 @@ package com.example.demo.Service;
 
 import java.util.*;
 import org.springframework.stereotype.Service;
-import com.example.demo.Entity.Student;
+import com.example.demo.Entity.Studententity;
 
 @Service
 public class StudentServiceImpl implements Studentservice {
 
-    private final Map<Long, Student> store = new HashMap<>();
+    private final Map<Long, Studententity> store = new HashMap<>();
     private long counter = 1;
 
     @Override
-    public Student insertStudent(Student st) {
+    public Studententity insertStudent(Studententity st) {
         st.setId(counter++);
         store.put(st.getId(), st);
         return st;
     }
 
     @Override
-    public List<Student> getAllStudents() {
+    public List<Studententity> getAllStudents() {
         return new ArrayList<>(store.values());
     }
 
     @Override
-    public Optional<Student> getOneStudent(Long id) {
+    public Optional<Studententity> getOneStudent(Long id) {
         return Optional.ofNullable(store.get(id));
     }
 
