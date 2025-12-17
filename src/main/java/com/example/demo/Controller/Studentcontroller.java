@@ -16,13 +16,13 @@ public class Studentcontroller {
 
     private final Studentservice studentService;
 
-    public Studententity(Studentservice studentService) {
+    public Studentcontroller(Studentservice studentService) {
         this.studentService = studentService;
     }
 
     // CREATE
     @PostMapping
-    public Studentcontroller postStudent(@RequestBody Studententity st) {
+    public Studententity postStudent(@RequestBody Studententity st) {
         return studentService.insertStudent(st);
     }
 
