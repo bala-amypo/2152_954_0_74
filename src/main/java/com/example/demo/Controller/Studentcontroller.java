@@ -44,5 +44,14 @@ public class Studentcontroller{
         }
         return "Student Not Found";
     }
+    @DeleteMapping("/delete/{id}")
+    public String deleteStudent(@PathVariable Long id){
+        Optional<Student> student=studentService.getOneStudent(id);
+        if(student.isPresent()){
+            studentService.deleteStudent(id);
+            return "Deleted Success";
+        }
+        return "Student Not Found";
+    }
     
 }
