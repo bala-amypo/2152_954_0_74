@@ -21,5 +21,14 @@ public class Studentcontroller{
     @Autowired
     Studentservice studentService;
 
-    @
+    @PostMapping("/PostStudent")
+    public Student postStd(@RequestBody Student st){
+        return studentService.getAllStudents();
+    }
+    @GetMapping("/getAll")
+    public List<Student> get(@PathVariable Long id){
+        return studentService.getAllStudents();
+    }
+
+    @PutMapping
 }
