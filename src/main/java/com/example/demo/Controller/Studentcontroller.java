@@ -7,7 +7,7 @@ import java.util.Optional;
 
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.Entity.Entitystudent;
+import com.example.demo.Entity.Studententity;
 import com.example.demo.Service.Studentservice;
 
 @RestController
@@ -22,29 +22,29 @@ public class Studentcontroller {
 
     // CREATE
     @PostMapping
-    public Studentcontroller postStudent(@RequestBody Entitystudent st) {
+    public Studentcontroller postStudent(@RequestBody Studententity st) {
         return studentService.insertStudent(st);
     }
 
     // READ ALL
     @GetMapping
-    public List<Student> getAll() {
+    public List<Studententity> getAll() {
         return studentService.getAllStudents();
     }
 
     // READ ONE
     @GetMapping("/{id}")
-    public Optional<Student> getById(@PathVariable Long id) {
+    public Optional<Studententity> getById(@PathVariable Long id) {
         return studentService.getOneStudent(id);
     }
 
     // UPDATE
     @PutMapping("/{id}")
-    public String updateStudent(@PathVariable Long id, @RequestBody Student st) {
-        Optional<Student> studentOpt = studentService.getOneStudent(id);
+    public String updateStudent(@PathVariable Long id, @RequestBody Studententity st) {
+        Optional<Studententity> studentOpt = studentService.getOneStudent(id);
 
         if (studentOpt.isPresent()) {
-            Student student = studentOpt.get();
+            Studententity student = studentOpt.get();
             student.setName(st.getName());
             student.setEmail(st.getEmail());
             student.setCgpa(st.getCgpa());
@@ -59,7 +59,7 @@ public class Studentcontroller {
     // DELETE
     @DeleteMapping("/{id}")
     public String deleteStudent(@PathVariable Long id) {
-        Optional<Student> student = studentService.getOneStudent(id);
+        Optional<Studententity> student = studentService.getOneStudent(id);
 
         if (student.isPresent()) {
             studentService.deleteStudent(id);
