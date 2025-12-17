@@ -1,6 +1,6 @@
 
 
-package com.example.demo.controller;
+package com.example.demo.Controller;
 
 import java.util.List;
 import java.util.Optional;
