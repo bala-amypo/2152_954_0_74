@@ -26,5 +26,38 @@ public class Studententity{
         this.id=id;
     }
 
-    public S
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public void setEmail(String email){
+        this.email=email;
+    }
+
+    public LocalDate getDob(){
+        return cgpa;
+    }
+
+    public voidsetCgpa(Float cgpa){
+        this.cgpa=cgpa;
+    }
+    public Student(Float cgpa,LocalDate dob,String email,Long id,String name){
+        this.cgpa=cgpa;
+        this.dob=dob;
+        this.email=email;
+        this.id=id;
+        this.name=name;
+    }
+
+    public Student(){
+        
+    }
 }
