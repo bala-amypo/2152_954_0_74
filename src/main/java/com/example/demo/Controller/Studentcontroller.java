@@ -7,7 +7,7 @@ import java.util.Optional;
 
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.Entity.Student;
+import com.example.demo.Entity.Entitystudent;
 import com.example.demo.Service.Studentservice;
 
 @RestController
@@ -22,7 +22,7 @@ public class Studentcontroller {
 
     // CREATE
     @PostMapping
-    public Studentcontroller postStudent(@RequestBody Student st) {
+    public Studentcontroller postStudent(@RequestBodySstudent st) {
         return studentService.insertStudent(st);
     }
 
