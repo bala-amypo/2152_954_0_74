@@ -21,7 +21,6 @@ public class Studententity {
     private LocalDate dob;
     private Float cgpa;
 
-
     public Long getId() {
         return id;
     }
@@ -69,7 +68,7 @@ public class Studententity {
         this.name = name;
     }
     
-    public Student() {
+    public Studententity() {
     }
 
 }
