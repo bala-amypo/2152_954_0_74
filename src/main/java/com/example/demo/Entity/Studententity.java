@@ -43,10 +43,12 @@ public class Studententity{
     }
 
     public LocalDate getDob(){
-        return cgpa;
+        return dob;
     }
+    public void setDob(LocalDate dob){
+        this.dob=dob;
 
-    public voidsetCgpa(Float cgpa){
+    public void setCgpa(Float cgpa){
         this.cgpa=cgpa;
     }
     public Student(Float cgpa,LocalDate dob,String email,Long id,String name){
