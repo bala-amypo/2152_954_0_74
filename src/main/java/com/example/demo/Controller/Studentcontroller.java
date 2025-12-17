@@ -29,6 +29,20 @@ public class Studentcontroller{
     public List<Student> get(@PathVariable Long id){
         return studentService.getAllStudents();
     }
-
-    @PutMapping
+    @GetMapping("/get/{id}")
+    public Optional<Student> get(@PathVariable Long id){
+        return studentService.getOneStudent(id);
+    }
+    @PutMapping("/update{id}")
+    public String ipdateStudent(@PathVariable Long is,@RequestBody Student st){
+        Optional<Student> student=studentService.getOneStudent(id);
+        if(student.isPresent()){
+            Student newStudent=student.get();
+            newStudent.setId(id);
+            studentService.insertStudent(newStudent);
+            return "Updated Success";
+        }
+        return "Student Not Found";
+    }
+    
 }
