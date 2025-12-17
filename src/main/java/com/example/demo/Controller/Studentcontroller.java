@@ -12,9 +12,9 @@ import com.example.demo.Service.Studentservice;
 
 @RestController
 @RequestMapping("/students") 
-public class StudentController {
+public class Studentcontroller {
 
-    private final StudentService studentService;
+    private final Studentservice studentService;
 
     public Studentcontroller(Studentservice studentService) {
         this.studentService = studentService;

@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 
 @Entity
 
-public class Student {
+public class Studententity {
 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

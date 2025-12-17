@@ -4,10 +4,10 @@ package com.example.demo.service;
 
 import java.util.*;
 import org.springframework.stereotype.Service;
-import com.example.demo.entity.Student;
+import com.example.demo.Entity.Student;
 
 @Service
-public class StudentServiceImpl implements StudentService {
+public class StudentServiceImpl implements Studentservice {
 
     private final Map<Long, Student> store = new HashMap<>();
     private long counter = 1;
