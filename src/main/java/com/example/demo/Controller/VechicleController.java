@@ -8,7 +8,7 @@ import com.example.demo.Service.VehicleService;
 
 @RestController
 @RequestMapping("/vehicles")
-public class VehicleController {
+public class VehicleController{
 
     private final VehicleService vehicleService;
 
