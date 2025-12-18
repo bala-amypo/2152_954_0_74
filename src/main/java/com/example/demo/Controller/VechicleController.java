@@ -19,6 +19,6 @@ public class VehicleController {
     @PostMapping("/{userId}")
     public VehicleEntity addVehicle(@PathVariable Long userId,
                               @RequestBody VehicleEntity vehicle) {
-        return vehicleService.addVehicle(userId, vehicleEntity);
+        return vehicleService.addVehicle(userId, vehicle);
     }
 }
