@@ -27,8 +27,7 @@ public class VehicleServiceImpl implements VehicleService {
             throw new IllegalArgumentException("Capacity must be greater than zero");
         }
 
-        UserEntity user = userRepo.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+        UserEntity user = userRepo.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
 
         vehicle.setUser(user);
         return vehicleRepo.save(vehicle);
