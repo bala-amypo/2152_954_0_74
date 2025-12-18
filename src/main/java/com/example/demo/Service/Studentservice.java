@@ -9,7 +9,7 @@ public interface Studentservice{
 
     List<Studententity> getAllStudents();
 
-    Optional<Studententity > getOneStudent(Long id);
+    Optional<Studententity> getOneStudent(Long id);
 
     void deleteStudent(Long id);
 }
