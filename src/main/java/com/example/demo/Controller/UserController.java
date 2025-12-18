@@ -1,1 +1,5 @@
-package com.ex
+package com.example.demo.Controller;
+
+public class UserController{
+    
+}
