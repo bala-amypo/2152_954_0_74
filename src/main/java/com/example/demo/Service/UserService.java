@@ -1,9 +1,7 @@
+package com.example.demo.Service;
 
+import com.example.demo.Entity.UserEntity;
 
-package com.example.demo.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import com.example.demo.entity.Vehicle;
-
-public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
+public interface UserService {
+    UserEntity registerUser(UserEntity user);
 }
